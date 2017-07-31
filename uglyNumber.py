@@ -12,6 +12,7 @@ class Solution(object):
 		for iteration in range(n-1):
 			neo = [ugly[cursor[0]] *2, ugly[cursor[1]] *3, ugly[cursor[2]] *5]
 			for i in range(3):
+				#use if instead of if ... elif: there may be some equal values, get rid of duplication
 				if neo[i] == min(neo):
 					cursor[i] += 1
 			ugly.append(min(neo))
